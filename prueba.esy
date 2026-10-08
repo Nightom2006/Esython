@@ -1,0 +1,50 @@
+imprimir "========================================"
+imprimir "   SUITE DE PRUEBAS COMPLETA: ESYTHON   "
+imprimir "========================================"
+
+# 1. Captura de datos y conversiones de tipo
+imprimir "--- 1. Prueba de Entrada y Conversiones ---"
+variable nombre = texto(leer("Ingresa tu nombre: "))
+variable edad = entero(leer("Ingresa tu edad: "))
+variable estatura = decimal(leer("Ingresa tu estatura en metros (ej. 1.75): "))
+variable respuesta_socio = leer("¿Eres socio activo? (si/no): ")
+variable es_socio = booleano(respuesta_socio)
+
+imprimir "Hola " + nombre
+imprimir "Datos registrados con éxito."
+
+# 2. Operaciones aritméticas y uso de paréntesis
+imprimir "--- 2. Cálculo Matemático y Precedencia ---"
+variable anio_nacimiento = 2026 - edad
+variable IndiceMasa = 70.5 / (estatura * estatura)
+
+imprimir "Año aproximado de nacimiento:"
+imprimir anio_nacimiento
+imprimir "IMC estimado (para 70.5 kg):"
+imprimir IndiceMasa
+
+# 3. Condicionales compuestas y operadores lógicos (y, o, no)
+imprimir "--- 3. Evaluación de Condiciones Compuestas ---"
+
+si edad >= 18 y es_socio:
+    imprimir "Estado: Acceso VIP concedido al club."
+
+si edad < 18 o no es_socio:
+    imprimir "Estado: Acceso restringido o requiere pase temporal."
+
+si estatura >= 1.70 o (edad > 15 y es_socio):
+    imprimir "Resultado: Califica para el equipo deportivo."
+
+# 4. Bucle MIENTRAS con indentación flexible
+imprimir "--- 4. Prueba de Bucle MIENTRAS ---"
+variable contador = 1
+variable limite = 3
+
+mientras contador <= limite:
+    imprimir "Ejecutando ciclo de prueba número:"
+    imprimir contador
+    variable contador = contador + 1
+
+imprimir "========================================"
+imprimir "¡Todas las características probadas con éxito!"
+imprimir "========================================"
